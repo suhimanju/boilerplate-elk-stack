@@ -1,0 +1,8 @@
+#In the presence of this YAML file, filebeat identifies the log patterns for the nginx server & ships it to the logstash
+- module: nginx
+  access:
+    enabled: true
+    var.paths: ["/home/ubuntu/logs/nginx-access.log"]
+  error:
+    enabled: true
+    var.paths: ["/home/ubuntu/logs/nginx-error.log"]

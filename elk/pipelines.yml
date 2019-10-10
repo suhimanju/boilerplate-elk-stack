@@ -1,0 +1,16 @@
+# This file is where you define your pipelines. You can define multiple.
+# For more information on multiple pipelines, see the documentation:
+#   https://www.elastic.co/guide/en/logstash/current/multiple-pipelines.html
+
+#- pipeline.id: main
+#  path.config: "/etc/logstash/conf.d/*.conf"
+
+- pipeline.id: nginx_call_history
+  path.config: "/etc/logstash/conf.d/inmail-dev-nginx.conf"
+  pipeline.workers: 2
+-- pipeline.id: webserver_call_history
+  path.config: "/etc/logstash/conf.d/inmail-dev-web.conf"
+  pipeline.workers: 2
+- pipeline.id: workerlog_call_history
+  path.config: "/etc/logstash/conf.d/inmail-dev-worker.conf"
+  pipeline.workers: 2
