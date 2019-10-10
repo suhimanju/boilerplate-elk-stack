@@ -84,7 +84,7 @@ input {
 ```
 input{
  file {
-        type => "inmail-web-logs"
+        type => "web-logs"
         path => "/home/ubuntu/logs/web.log"
         start_position => "beginning"
    }

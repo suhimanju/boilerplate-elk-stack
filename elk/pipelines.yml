@@ -6,11 +6,11 @@
 #  path.config: "/etc/logstash/conf.d/*.conf"
 
 - pipeline.id: nginx_call_history
-  path.config: "/etc/logstash/conf.d/inmail-dev-nginx.conf"
+  path.config: "/etc/logstash/conf.d/dev-nginx.conf"
   pipeline.workers: 2
 -- pipeline.id: webserver_call_history
-  path.config: "/etc/logstash/conf.d/inmail-dev-web.conf"
+  path.config: "/etc/logstash/conf.d/dev-web.conf"
   pipeline.workers: 2
 - pipeline.id: workerlog_call_history
-  path.config: "/etc/logstash/conf.d/inmail-dev-worker.conf"
+  path.config: "/etc/logstash/conf.d/dev-worker.conf"
   pipeline.workers: 2
